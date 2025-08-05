@@ -491,7 +491,7 @@ const Header: React.FC = () => {
                     <Link
                       href="/login"
                       onClick={closeMenus}
-                      className="flex items-center gap-4 w-full p-4 text-accent-gold hover:text-yellow-400 hover:bg-accent-gold/10 rounded-xl transition-all duration-300 border border-accent-gold/20 hover:border-accent-gold/40 group"
+                      className="flex items-center gap-4 w-full p-4 text-accent-gold hover:text-yellow-400 hover:bg-accent-gold/10 rounded-xl transition-all duration-300 border border-accent-gold group"
                       aria-label="Lien vers la page de connexion"
                     >
                       <LogIn
