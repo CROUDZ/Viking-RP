@@ -6,7 +6,7 @@
     "dev": "next dev",
     "format": "prettier --write .",
     "clean": "rm -rf dist .next node_modules",
-    "build": "npx prisma generate && npm run build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
