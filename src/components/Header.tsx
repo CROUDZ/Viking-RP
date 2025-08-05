@@ -133,7 +133,12 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-visible">
         <div className="flex items-center justify-between h-16 lg:h-20 overflow-visible">
           {/* Logo Section */}
-          <Link href="/" onClick={closeMenus} className="group">
+          <Link
+            href="/"
+            onClick={closeMenus}
+            className="group"
+            aria-label="Accueil VikingRP"
+          >
             <m.div
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
@@ -142,7 +147,7 @@ const Header: React.FC = () => {
               <div className="relative">
                 <Image
                   src={logo}
-                  alt="VikingRP Logo"
+                  alt="Logo VikingRP Accueil"
                   width={56}
                   height={56}
                   className="w-14 h-14 lg:w-16 lg:h-16 object-contain transition-all duration-300 group-hover:drop-shadow-lg"
@@ -177,6 +182,7 @@ const Header: React.FC = () => {
                     target={item.external ? "_blank" : undefined}
                     rel={item.external ? "noopener noreferrer" : undefined}
                     className="group relative"
+                    aria-label={`Lien vers ${item.label}`}
                   >
                     <m.div
                       whileHover={{ y: -1 }}
@@ -197,7 +203,10 @@ const Header: React.FC = () => {
                       />
                       <span className="text-sm lg:text-base">{item.label}</span>
                       {item.external && (
-                        <ExternalLink size={14} className="opacity-60" />
+                        <>
+                          <ExternalLink size={14} className="opacity-60" />
+                          <span className="sr-only">{`Lien externe vers ${item.label}`}</span>
+                        </>
                       )}
                     </m.div>
                   </Link>
@@ -244,11 +253,12 @@ const Header: React.FC = () => {
                   className="flex items-center gap-3 bg-gradient-to-r from-slate-800/80 to-slate-900/80 hover:from-slate-700/80 hover:to-slate-800/80 px-4 py-2.5 rounded-xl border border-accent-gold transition-all duration-300 backdrop-blur-sm group"
                   aria-expanded={isDropdownOpen}
                   aria-haspopup="true"
+                  aria-label="Menu utilisateur connecté"
                 >
                   <div className="relative">
                     <Image
                       src={steveAvatar}
-                      alt="Avatar utilisateur"
+                      alt="Avatar utilisateur connecté"
                       width={32}
                       height={32}
                       className="w-8 h-8 rounded-lg"
@@ -317,6 +327,7 @@ const Header: React.FC = () => {
                                 href="/admin"
                                 onClick={closeMenus}
                                 className="flex items-center gap-3 px-3 py-2.5 text-text-secondary hover:text-text-primary hover:bg-amber-900/20 hover:border-amber-500/20 border border-transparent rounded-xl transition-all duration-200 group"
+                                aria-label="Lien vers le panneau d'administration"
                               >
                                 <Shield
                                   size={18}
@@ -331,6 +342,7 @@ const Header: React.FC = () => {
                             <button
                               onClick={handleLogout}
                               className="flex items-center gap-3 w-full px-3 py-2.5 text-red-400 hover:text-red-300 hover:bg-red-900/20 rounded-xl transition-all duration-200 group"
+                              aria-label="Déconnexion"
                             >
                               <LogOut
                                 size={18}
@@ -353,6 +365,7 @@ const Header: React.FC = () => {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 href="/login"
+                aria-label="Lien vers la page de connexion"
                 className="flex items-center gap-2.5 px-4 py-2.5 bg-gradient-to-r from-accent-gold/10 to-yellow-500/10 hover:from-accent-gold/20 hover:to-yellow-500/20 text-accent-gold hover:text-yellow-400 border border-accent-gold rounded-xl transition-all duration-300 font-medium backdrop-blur-sm group"
               >
                 <LogIn
@@ -432,6 +445,7 @@ const Header: React.FC = () => {
                         rel={item.external ? "noopener noreferrer" : undefined}
                         onClick={closeMenus}
                         className="group block"
+                        aria-label={`Lien vers ${item.label}`}
                       >
                         <div
                           className={`flex items-center gap-4 p-4 rounded-xl transition-all duration-300 ${
@@ -452,10 +466,13 @@ const Header: React.FC = () => {
                             {item.label}
                           </span>
                           {item.external && (
-                            <ExternalLink
-                              size={16}
-                              className="opacity-60 ml-auto"
-                            />
+                            <>
+                              <ExternalLink
+                                size={16}
+                                className="opacity-60 ml-auto"
+                              />
+                              <span className="sr-only">{`Lien externe vers ${item.label}`}</span>
+                            </>
                           )}
                         </div>
                       </Link>
@@ -475,6 +492,7 @@ const Header: React.FC = () => {
                       href="/login"
                       onClick={closeMenus}
                       className="flex items-center gap-4 w-full p-4 text-accent-gold hover:text-yellow-400 hover:bg-accent-gold/10 rounded-xl transition-all duration-300 border border-accent-gold/20 hover:border-accent-gold/40 group"
+                      aria-label="Lien vers la page de connexion"
                     >
                       <LogIn
                         size={22}

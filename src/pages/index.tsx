@@ -66,6 +66,7 @@ export default function Home() {
             <div className="max-w-6xl mx-auto text-center space-y-8 sm:space-y-12">
               {/* Logo and Title Section */}
               <div className="space-y-6 animate-fade-in flex justify-center">
+                <h1 className="sr-only">Accueil - Serveur Minecraft Roleplay Viking</h1>
                 <Image
                   src={Logo}
                   alt="Viking RP Logo"
@@ -92,9 +93,9 @@ export default function Home() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto animate-fade-in-delay-2">
                 <div className="bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center group hover:bg-slate-800/60 transition-all duration-300">
                   <Shield className="w-8 h-8 text-amber-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-                  <h3 className="text-white font-semibold mb-2">
+                  <h2 className="text-white font-semibold mb-2">
                     Immersion Totale
-                  </h3>
+                  </h2>
                   <p className="text-slate-300 text-sm">
                     Roleplay authentique dans l'univers Viking
                   </p>
@@ -102,9 +103,9 @@ export default function Home() {
 
                 <div className="bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center group hover:bg-slate-800/60 transition-all duration-300">
                   <Users className="w-8 h-8 text-amber-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-                  <h3 className="text-white font-semibold mb-2">
+                  <h2 className="text-white font-semibold mb-2">
                     Communauté Active
-                  </h3>
+                  </h2>
                   <p className="text-slate-300 text-sm">
                     Joueurs passionnés et événements réguliers
                   </p>
@@ -112,9 +113,9 @@ export default function Home() {
 
                 <div className="bg-slate-800/40 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 text-center group hover:bg-slate-800/60 transition-all duration-300">
                   <Zap className="w-8 h-8 text-amber-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-300" />
-                  <h3 className="text-white font-semibold mb-2">
+                  <h2 className="text-white font-semibold mb-2">
                     Expérience Unique
-                  </h3>
+                  </h2>
                   <p className="text-slate-300 text-sm">
                     Mécaniques innovantes et monde vivant
                   </p>

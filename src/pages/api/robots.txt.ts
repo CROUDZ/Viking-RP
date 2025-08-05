@@ -20,6 +20,6 @@ Crawl-delay: 1`;
     "public, s-maxage=86400, stale-while-revalidate",
   );
 
-  res.write(robotsTxt);
-  res.end();
+  res.status(200).send(robotsTxt);
 }
+
