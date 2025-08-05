@@ -56,8 +56,7 @@ export default function Home() {
             playsInline
           />
           {/* Enhanced gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-950/70 to-slate-950/90"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-amber-950/20 via-transparent to-amber-950/20"></div>
+          <div className="absolute inset-0 bg-[#000000CC]"></div>
         </div>
 
         {/* Hero Content */}
