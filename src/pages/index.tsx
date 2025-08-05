@@ -65,7 +65,7 @@ export default function Home() {
           <div className="flex-1 flex items-center justify-center px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto text-center space-y-8 sm:space-y-12">
               {/* Logo and Title Section */}
-              <div className="space-y-6 animate-fade-in flex justify-center">
+              <div className="space-y-6 animate-fade-in flex justify-center mt-8 sm:mt-12">
                 <h1 className="sr-only">Accueil - Serveur Minecraft Roleplay Viking</h1>
                 <Image
                   src={Logo}
